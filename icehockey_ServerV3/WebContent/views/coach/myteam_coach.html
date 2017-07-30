@@ -15,10 +15,36 @@
 </script>
 </head>
 <body>
-<h1 class="p1">我的球队</h1>
+<h1 class="p1">效力球队,俱乐部</h1>
 <input type="button" class="button_back" onclick="javascript:history.back(-1);" value="">
 <div id="myteam">
-	
+	<h4>球队:</h4>
+		<table id="mainTable" class="display hover" border="1">
+			<thead>
+				<tr>
+					<th width="10%">球队名称</th>
+					<th width="10%">进入时间</th>
+					<th width="10%">离开时间</th>
+					<th width="10%">最好成绩</th>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+			</tbody>
+		</table>
+		<h4>俱乐部:</h4>
+		<table id="mainTable1" class="display hover" border="1">
+			<thead>
+				<tr>
+					<th width="10%">俱乐部名称</th>
+					<th width="10%">俱乐部管理员</th>
+					<th width="10%">俱乐部地址</th>
+					<th width="10%">进入时间</th>
+					<th width="10%">离开时间</th>
+				</tr>
+			</thead>
+			<tbody id="tbody1">
+			</tbody>
+		</table>
 </div>
 </body>
 <script src="../../js/urlApi/api.js"></script>

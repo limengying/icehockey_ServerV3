@@ -12,7 +12,7 @@ $(function() {
 			if (jsonReturn.result == "0") {
 				//alert("姓名："+jsonReturn.userName);
 				//在id为myphoto的div中显示所有照片信息
-				$("#myphoto").html("级别："+jsonReturn.myphoto);
+				//$("#myphoto").html("级别："+jsonReturn.myphoto);
 				// window.open
 			} else if (jsonReturn.result == "-1") {
 				alert("当前没有登录用户");

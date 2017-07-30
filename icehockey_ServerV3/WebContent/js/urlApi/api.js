@@ -27,3 +27,7 @@ const DEGREEURL=IPCONFIG+'/jsp/degree.jsp';//等级资质url
 const TEACHCLUBURL=IPCONFIG+'/jsp/teachclub.jsp';//执教俱乐部url
 const TEACHTEAMURL=IPCONFIG+'/jsp/teachteam.jsp';//执教球队url
 const JUDGEEXPERIENCEURL=IPCONFIG+'/jsp/judgeExperience.jsp';//执法经历url
+const OFTENSITEMURL=IPCONFIG+'/jsp/oftensite.jsp';//常去场地url
+const EQUIPMENTURL=IPCONFIG+'/jsp/equipment.jsp';//装备url
+const MYACTIVITYURL=IPCONFIG+'/jsp/equipment.jsp';//装备url
+const MYPHOTOURL=IPCONFIG+'/jsp/equipment.jsp';//装备url

@@ -1,15 +1,15 @@
-<%@page import="com.icehockey.entity.DegreeRecord,java.util.List,com.icehockey.service.DegreeRecordService,org.codehaus.jackson.map.ObjectMapper,java.util.HashMap,java.util.Map,com.icehockey.entity.User,com.icehockey.service.UserService,java.io.PrintWriter"%>
+<%@page
+	import="org.codehaus.jackson.map.ObjectMapper,java.util.HashMap,java.util.Map,com.icehockey.entity.User,com.icehockey.service.UserService,java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		response.setContentType("application/json");
-		System.out.println("------------------------degree.html--------------------------------------");
+		System.out.println("------------------------oftensite.html--------------------------------------");
 		PrintWriter writer = response.getWriter();
 		UserService userService = new UserService();
 		User user = null;
 		Map<String, Object> map  = new HashMap<String, Object>();
-		DegreeRecordService degreeRecordService=new DegreeRecordService();
 		int userId = -1;
 		//前端获取传入的data
 		String userid = null;
@@ -18,20 +18,10 @@
 			userId = Integer.parseInt(userid);
 		} else {
 			map.put("userid", "null");
-		}
-		
+		}	
 		user = userService.queryUserByUserId(userId);
 		if (user != null) {//插入成功
 			System.out.println("找到当前用户" + user);
-			List<DegreeRecord> degreeRecords=degreeRecordService.queryCoachDegreeByUserId(userId);
-			if(degreeRecords.size()!=0){
-				map.put("hasDegree", "yes");
-				map.put("degreeRecords", degreeRecords);
-			}else{
-				map.put("hasDegree", "no");
-				System.out.println("未找到等级记录");
-			}
-		
 			//处理成功返回result=0	
 			map.put("result", "0");
 			map.put("userId", userId);

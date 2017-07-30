@@ -36,6 +36,7 @@
 			map.put("result", "0");
 			map.put("userId", userId);
 			map.put("userid", userId);
+			map.put("role", user.getRole());
 			System.out.println("map找到啦..." + map);
 		} else {
 			System.out.println("查找失败");

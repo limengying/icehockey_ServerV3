@@ -25,10 +25,19 @@
 	user = userService.queryUserByUserId(userId);
 	if (user != null) {//插入成功
 		System.out.println("找到当前用户" + user);
-		List<CompetitionRecord> competitionRecords = competitionRecordService
-				.queryPlayerByUserId(userId);
-		if (competitionRecords != null) {
-			map.put("competitionRecords", competitionRecords);
+		List<CompetitionRecord> invitecompetitionRecords = competitionRecordService
+				.queryInviteCompetitionByUserId(userId);
+		if (invitecompetitionRecords.size()!=0) {
+			map.put("invite", "invite");
+			map.put("invitecompetitionRecords", invitecompetitionRecords);
+		} else {
+			System.out.println("没有赛事记录...");
+		}
+		List<CompetitionRecord> officialcompetitionRecords = competitionRecordService
+				.queryOfficalCompetitionByUserId(userId);
+		if (officialcompetitionRecords.size()!=0) {
+			map.put("official", "official");
+			map.put("officialcompetitionRecords", officialcompetitionRecords);
 		} else {
 			System.out.println("没有赛事记录...");
 		}

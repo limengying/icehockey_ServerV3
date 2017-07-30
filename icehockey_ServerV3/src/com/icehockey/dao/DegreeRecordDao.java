@@ -22,13 +22,14 @@ public class DegreeRecordDao {
 	
 	public List<DegreeRecord> getDegreeRecordByUserId(int userId) {
 
-		String sql = "SELECT competitionrecord.competitionRecordId competitionRecordId, competition.competitionId competitionId, competition.competitionName competitionName, competitionrecord.userId userId, USER .userName userName, competition.competitionType competitionType, competition.hostPlace hostPlace, competition.onDate onDate, competitionrecord.score score FROM competition, competitionrecord, USER WHERE USER .userId = competitionrecord.userId AND competition.competitionId = competitionrecord.competiitionId AND USER .userId = ?";
+		String sql = "SELECT degreerecord.degreeRecordId degreeRecordId, degreerecord.degreeId degreeId, degree.degreeName degreeName, degreerecord.userId userId, USER .userName userName, degreerecord.onDate onDate FROM degree, degreerecord, USER WHERE USER .userId = degreerecord.userId AND degree.degreeId = degreerecord.degreeId AND USER .userId = ?";
 		try {
 			conn = util.openConnection();
 			preparedStatement = conn.prepareStatement(sql);
 			preparedStatement.setInt(1, userId);
 			rs = preparedStatement.executeQuery();
 			degreeRecords=new ArrayList<DegreeRecord>();
+			System.out.println(sql);
 			while (rs.next()) {
 				
 				int degreeRecordId = rs.getInt("degreeRecordId");//等级记录编号
@@ -40,7 +41,6 @@ public class DegreeRecordDao {
 				
 				degreeRecord = new DegreeRecord(degreeRecordId, degreeId, degreeName, userId, userName, onDate);
 				degreeRecords.add(degreeRecord);
-				return degreeRecords;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

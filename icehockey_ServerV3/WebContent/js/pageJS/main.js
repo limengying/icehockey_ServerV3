@@ -108,8 +108,8 @@ function mineClick() {
 								window.location.href = "../views/imformation/qiuyuan.html?userid=" + jsonReturn.userid;
 
 							}
-							if (jsonReturn.roleName = "")
-								;// 其他成员
+							if (jsonReturn.roleName = "裁判")
+								window.location.href = "../views/imformation/coachinfo.html?userid=" + jsonReturn.userid;// 其他成员
 
 						} else if (jsonReturn == "-1") {// 未接收到返回数据的处理
 							alert("当前没有登录用户");

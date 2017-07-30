@@ -16,7 +16,16 @@
 <h1 class="p1">我的级别</h1>
 <input type="button" class="button_back" onclick="javascript:history.back(-1);" value="">
 <div id="mylevel">
-	
+	<table id="mainTable" class="display hover" border="1">
+			<thead>
+				<tr>
+					<th width="10%">等级名称</th>
+					<th width="10%">获得时间</th>
+				</tr>
+			</thead>
+			<tbody id="tbody">
+			</tbody>
+		</table>
 </div>
 </body>
 <script src="../../js/urlApi/api.js"></script>

@@ -1,7 +1,4 @@
-<%@page import="com.icehockey.service.PlayerService"%>
-<%@page import="com.icehockey.entity.Player"%>
-<%@page
-	import="org.codehaus.jackson.map.ObjectMapper,java.util.HashMap,java.util.Map,com.icehockey.entity.User,com.icehockey.service.UserService,java.io.PrintWriter"%>
+<%@page import="com.icehockey.service.PlayerService,com.icehockey.entity.Player,org.codehaus.jackson.map.ObjectMapper,java.util.HashMap,java.util.Map,com.icehockey.entity.User,com.icehockey.service.UserService,java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%

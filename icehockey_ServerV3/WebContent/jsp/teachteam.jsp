@@ -1,4 +1,4 @@
-<%@page import="com.icehockey.entity.TeamRecord,java.util.List,com.icehockey.service.TeamRecordService,org.codehaus.jackson.map.ObjectMapper,java.util.HashMap,java.util.Map,com.icehockey.entity.User,com.icehockey.service.UserService,java.io.PrintWriter"%>
+<%@page import="com.icehockey.service.ClubRecordService,com.icehockey.entity.ClubRecord,com.icehockey.entity.TeamRecord,java.util.List,com.icehockey.service.TeamRecordService,org.codehaus.jackson.map.ObjectMapper,java.util.HashMap,java.util.Map,com.icehockey.entity.User,com.icehockey.service.UserService,java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%
@@ -10,6 +10,7 @@
 		User user = null;
 		Map<String, Object> map  = new HashMap<String, Object>();
 		TeamRecordService teamRecordService=new TeamRecordService();
+		ClubRecordService ClubRecordService=new ClubRecordService();
 		int userId = -1;
 		//前端获取传入的data
 		String userid = null;
@@ -29,7 +30,12 @@
 			}else{
 				System.out.println("未找到执教俱乐部记录");
 			}
-		
+			List<ClubRecord> clubRecords=ClubRecordService.queryClubRecordByUserId(userId);
+			if(clubRecords!=null){
+				map.put("clubRecords", clubRecords);
+			}else{
+				System.out.println("未找到执教俱乐部记录");
+			}
 			//处理成功返回result=0	
 			map.put("result", "0");
 			map.put("userId", userId);

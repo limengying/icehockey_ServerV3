@@ -1,10 +1,4 @@
-<%@page import="org.apache.commons.fileupload.FileUploadException"%>
-<%@page import="java.io.PrintWriter"%>
-<%@page import="org.apache.commons.fileupload.FileItem"%>
-<%@page import="java.util.List"%>
-<%@page import="java.io.File"%>
-<%@page import="org.apache.commons.fileupload.disk.DiskFileItemFactory"%>
-<%@page import="org.apache.commons.fileupload.servlet.ServletFileUpload"%>
+<%@page import="org.apache.commons.fileupload.FileUploadException,java.io.PrintWriter,org.apache.commons.fileupload.FileItem,java.util.List,java.io.File,org.apache.commons.fileupload.disk.DiskFileItemFactory,org.apache.commons.fileupload.servlet.ServletFileUpload"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%

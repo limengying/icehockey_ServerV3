@@ -10,10 +10,10 @@ public class DegreeRecordService {
 	DegreeRecordDao dao=new DegreeRecordDao();
 	private List<DegreeRecord> degreeRecords=null;
 	
-	public List<DegreeRecord> queryPlayerByUserId(int userId) {
+	public List<DegreeRecord> queryCoachDegreeByUserId(int userId) {
 		degreeRecords = dao.getDegreeRecordByUserId(userId);
 		if(degreeRecords!=null){
-			System.out.println("找到该用户等级记录......"+degreeRecords);
+			System.out.println("找到该用户等级记录......"+degreeRecords.size());
 		}
 		return degreeRecords;
 	}
