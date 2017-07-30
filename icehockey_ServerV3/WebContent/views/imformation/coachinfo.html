@@ -12,7 +12,7 @@
 $(document).ready(function(){
 	var urlUserId=comm.getUrlParameter("userid");
 	  $(".button_gear").click(function(){
-	    window.location.href="../views/imformation/Systemsetting.html?userid="+urlUserId;
+	    window.location.href="../../views/imformation/Systemsetting.html?userid="+urlUserId;
 	  });
 	});
 $(document).ready(function(){
@@ -80,13 +80,13 @@ $(document).ready(function(){
 <body>
 <input type="button" class="button_gear" value="">
 <input type="button" class="button_bell" value="">
-<input type="button" class="button_coach" value="">
+<!--<input type="button" class="button_coach" value="">-->
 <input type="button" class="button_invite" value="邀请好友">
 <input type="button" class="button_follow" value="关注">
 <input type="button" class="button_fans" value="粉丝">
-<div class="div1cs">
-<p>
-教练员、裁判员</p>
+<div id="divcs1">
+	<img src="../../images/man.png">
+	<span>教练员裁判员</span>
 </div>
 
 

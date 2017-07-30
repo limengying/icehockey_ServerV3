@@ -79,8 +79,14 @@ $(document).ready(function(){
 	<h1>人员信息</h1>
 	<input type="button" class="button_setting" value="">
 	<input type="button" class="button_bell" value="">
-	<input type="button" class="button_man" value="">
-	<input type="button" class="button_shoumenyuan" value="">
+	<div id="man">
+		<img src="../../images/man.png" />
+	</div>
+	<div id="shoumenyuan">
+		<img src="../../images/roleChoose/qiuyuan.png">
+	</div>
+	<!--<input type="button" class="button_man" value="">-->
+	<!--<input type="button" class="button_shoumenyuan" value="">-->
 	<input type="button" class="button_zoushougan" value="">
 	<input type="button" class="button_xiehui" value="">
 	<input type="button" class="button_plus" value="">
@@ -101,7 +107,10 @@ $(document).ready(function(){
 	<input type="button" class="button_next5" value="">
 	<input type="button" class="button_next6" value="">
 	<input type="button" class="button_next7" value="">-->
-	<ul class="list">
+	<div class="list">
+		
+	
+	<ul>
 	<li>
 	<div id="Myinfo">
 	我的基本信息	
@@ -121,7 +130,7 @@ $(document).ready(function(){
 
 	</li>
 	<li>
-	<div id-"Group">当前组别
+	<div id="Group">当前组别
 	<input type="button" class="button_next4" value=""></div>
 		
 
@@ -149,13 +158,14 @@ $(document).ready(function(){
 
 	</li>
 	</ul>
+	</div>
 	<div class="main-bottom">
 
 			<div onclick="mainClick()">
 				<img src="../../images/login/user-photo.png" />
 				<span>主页面</span>
 			</div>
-			<div onclick="saichengClick()">
+			<div onclick="saichenClick()">
 				<img src="../../images/login/user-photo.png" />
 				<span>赛程</span>
 			</div>

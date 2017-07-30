@@ -87,3 +87,9 @@ body{
 	width:30px;
 	height:30px;
 }
+#mylevel{
+	color:white;
+	position:absolute;
+	top:10%;
+	left:50px;
+}
