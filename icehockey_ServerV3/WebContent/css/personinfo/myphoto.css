@@ -32,4 +32,9 @@ body{
 	left:60%;
 	top:100px;
 }
-
+#myphoto{
+	color:white;
+	position:absolute;
+	top:10%;
+	left:50px;
+}

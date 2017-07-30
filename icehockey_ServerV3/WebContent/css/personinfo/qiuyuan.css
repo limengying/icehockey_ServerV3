@@ -1,28 +1,26 @@
 body{
-	
-	background:url(../../images/lock-screen-background.png) center center no-repeat;
-	
-	
-	background-size:10000px 10000px;
-	
+	margin: 0px;
+	padding: 0px;
 }
+.qiuyuan_html{
+	height:100%;
+}
+
 .div1cs{
 	font-size:12px;
 	text-align:center;
 	color:white;
 	background:black;
-	position:fixed;
-	top:0px;
-	left:0px;
-	right:0px;
-	bottom:60%;
+	position:absolute;
+	height: 40%;
+	width:100%;
 }
 
 .button_setting{
 	border:none;
 	background:url(../../images/gear.png) center center no-repeat;
 	background-size:cover;
-	position:fixed;
+	position:absolute;
 	left:20px;
 	top:10px;
 	width:30px;
@@ -39,31 +37,31 @@ body{
 	width:30px;
 	height:30px;
 }
-.button_man{
-	border:none;
-	background:url(../../images/man.png) center center no-repeat;
-	background-size:cover;
-	position:fixed;
+#man{
+	display: flex;
+	-webkit-flex-direction: column;
+
+	position: absolute;
 	left:50px;
-	top:50px;
-	width:80px;
-	height:80px;
+	width:40%;
+	height:20%;
+	
 }
-.button_shoumenyuan{
-	border:none;
-	background:url(../../images/roleChoose/qiuyuan.png) center center no-repeat;
-	background-size:cover;
-	position:fixed;
+#shoumenyuan{
+	display: flex;
+	-webkit-flex-direction: column;
+
+	position: absolute;
+	width:40%;
+	top:60%;
 	left:50px;
-	top:130px;
-	width:80px;
-	height:80px;
+	
 }
 .list2{
 	list-style:none;
 	color:white;
-	position:fixed;
-	left:130px;
+	position:absolute;
+	left:60%;
 	top:80px;
 }
 .grad{
@@ -71,11 +69,12 @@ body{
 	background-size:cover;
 }
 .button_zoushougan{
+	
 	border:none;
 	background:url(../../images/zuoshougan.png) center center no-repeat;
 	background-size:cover;
-	position:fixed;
-	left:170px;
+	position:absolute;
+	left:60%;
 	top:180px;
 	width:30px;
 	height:30px;
@@ -84,8 +83,8 @@ body{
 	border:none;
 	background:url(../../images/xiehui.png) center center no-repeat;
 	background-size:cover;
-	position:fixed;
-	left:205px;
+	position:absolute;
+	left:70%;
 	top:180px;
 	width:30px;
 	height:30px;
@@ -94,8 +93,8 @@ body{
 	border:none;
 	background:url(../../images/plus.png) center center no-repeat;
 	background-size:cover;
-	position:fixed;
-	left:240px;
+	position:absolute;
+	left:80%;
 	top:180px;
 	width:30px;
 	height:30px;
@@ -104,33 +103,45 @@ body{
 	color:white;
 	border:none;
 	background:transparent;
-	position:fixed;
-	left:50px;
+	position:absolute;
+	left:0px;
+	width:30%;
 	top:215px;
 }
 .button_Follow{
 	color:white;
 	border:none;
 	background:transparent;
-	position:fixed;
-	left:150px;
+	position:absolute;
+	left:30%;
+	width:30%;
 	top:215px;
 }
 .button_Fans{
 	color:white;
 	border:none;
 	background:transparent;
-	position:fixed;
-	left:250px;
+	position:absolute;
+	left:70%;
 	top:215px;
 }
+ul{
+	margin: 0px;
+	padding: 0px;
+}
 .list{
+	text-indent: 2rem;
+	background: url(../../images/lock-screen-background.png);
+	background-size: 100%,100%;
+	width:100%;
+	height:80%;
 	color:white;
 	list-style:none;
-	position:fixed;
-	left:30px;
+	position:absolute;
+	
 	line-height: 2rem;
 	top:40%;
+	
 }
 .button_next1{
 	border:none;
@@ -138,7 +149,7 @@ body{
 	background-size:cover;
 	position: absolute;
 	top:0.5rem;
-	right:-50px;
+	right:50px;
 }
 .button_next2{
 	border:none;
@@ -146,7 +157,7 @@ body{
 	background-size:cover;
 	position: absolute;
 	top:2.5rem;
-	right:-50px;
+	right:50px;
 	
 	
 }
@@ -156,7 +167,7 @@ body{
 	background-size:cover;
 	position: absolute;
 	top:4.5rem;
-	right:-50px;
+	right:50px;
 }
 .button_next4{
 	border:none;
@@ -164,7 +175,7 @@ body{
 	background-size:cover;
 	position: absolute;
 	top:6.5rem;
-	right:-50px;
+	right:50px;
 	
 }
 .button_next5{
@@ -173,7 +184,7 @@ body{
 	background-size:cover;
 	position: absolute;
 	top:8.5rem;
-	right:-50px;
+	right:50px;
 	
 }
 .button_next6{
@@ -182,7 +193,7 @@ body{
 	background-size:cover;
 	position: absolute;
 	top:10.5rem;
-	right:-50px;
+	right:50px;
 	
 }
 .button_next7{
@@ -191,7 +202,7 @@ body{
 	background-size:cover;
 	position: absolute;
 	top:12.5rem;
-	right:-50px;
+	right:50px;
 	
 }
 .div2cs{

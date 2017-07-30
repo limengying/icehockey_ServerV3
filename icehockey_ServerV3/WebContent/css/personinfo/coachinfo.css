@@ -4,21 +4,31 @@ body{
 	background:url(../../images/lock-screen-background.png) center center no-repeat;
 	
 	
-	background-size:10000px 10000px;
+	background-size: 10000px,10000px;
+	height: 100%;
 	
 }
-.div1cs{
+#divcs1{
+	display: flex;
+	-webkit-flex-direction: column;
 	color:white;
-	position:fixed;
-	left:150px;
-	top:100px;
+	
+	position:absolute;
+	left:40%;
+	top:10%;
+	
+	
 }
 .list{
-	list-style:none;
+	background: transparent;
+	width:100%;
+	
 	color:white;
-	position:fixed;
-	top:280px;
-	line-height:2rem;
+	list-style:none;
+	position:absolute;
+	
+	line-height: 2rem;
+	top:40%;
 	
 }
 input{
@@ -28,7 +38,7 @@ input{
 .button_gear{
 	background:url(../../images/gear.png) center center no-repeat;
 	background-size:cover;
-	position:fixed;
+	position:absolute;
 	left:20px;
 	top:10px;
 	width:30px;
@@ -37,7 +47,7 @@ input{
 .button_bell{
 	background:url(../../images/bell27.png) center center no-repeat;
 	background-size:cover;
-	position:fixed;
+	position:absolute;
 	top:10px;
 	right:20px;
 	width:30px;
@@ -46,7 +56,7 @@ input{
 .button_coach{
 	background:url(../../images/man.png) center center no-repeat;
 	background-size:cover;
-	position:fixed;
+	position:absolute;
 	top:40px;
 	left:155px;
 	width:80px;
@@ -55,34 +65,36 @@ input{
 }
 .button_invite{
 	color:white;
-	background:url(../../images/lock-screen-background.png) center center no-repeat;
-	background-size:cover;
-	position:fixed;
-	left:50px;
-	top:240px;
+	border:none;
+	background:transparent;
+	position:absolute;
+	left:0px;
+	width:30%;
+	top:215px;
 }
 .button_follow{
 	color:white;
-	background:url(../../images/lock-screen-background.png) center center no-repeat;
-	background-size:cover;
-	position:fixed;
-	left:170px;
-	top:240px;
+	border:none;
+	background:transparent;
+	position:absolute;
+	left:30%;
+	width:30%;
+	top:215px;
 }
 .button_fans{
 	color:white;
-	background:url(../../images/lock-screen-background.png) center center no-repeat;
-	background-size:cover;
-	position:fixed;
-	left:290px;
-	top:240px;
+	border:none;
+	background:transparent;
+	position:absolute;
+	left:70%;
+	top:215px;
 }
 .button_next1{
 	background:url(../../images/next1.png) center center no-repeat;
 	background-size:cover;
 	position: absolute;
 	top:0.5rem;
-	right:-50px;
+	right:100px;
 	
 }
 .button_next2{
@@ -90,14 +102,14 @@ input{
 	background-size:cover;
 	position: absolute;
 	top:2.5rem;
-	right:-50px;
+	right:100px;
 }
 .button_next3{
 	background:url(../../images/next1.png) center center no-repeat;
 	background-size:cover;
 	position: absolute;
 	top:4.5rem;
-	right:-50px;
+	right:100px;
 	
 }
 .button_next4{
@@ -105,7 +117,7 @@ input{
 	background-size:cover;
 	position: absolute;
 	top:6.5rem;
-	right:-50px;
+	right:100px;
 	
 }
 .button_next5{
@@ -113,21 +125,21 @@ input{
 	background-size:cover;
 	position: absolute;
 	top:8.5rem;
-	right:-50px;
+	right:100px;
 	
 }.button_next6{
 	background:url(../../images/next1.png) center center no-repeat;
 	background-size:cover;
 	position: absolute;
 	top:10.5rem;
-	right:-50px;
+	right:100px;
 	
 }.button_next7{
 	background:url(../../images/next1.png) center center no-repeat;
 	background-size:cover;
 	position: absolute;
 	top:12.5rem;
-	right:-50px;
+	right:100px;
 	
 }
 .div2cs{
