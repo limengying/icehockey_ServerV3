@@ -1,3 +1,4 @@
+<%@page import="com.icehockey.service.ErrorService"%>
 <%@page
 	import="org.codehaus.jackson.map.ObjectMapper,java.util.HashMap,java.util.Map,com.icehockey.entity.User,com.icehockey.service.UserService,java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -5,28 +6,33 @@
 	<%
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		response.setContentType("application/json");
-		System.out.println("------------------------oscenter.html--------------------------------------");
+		System.out.println("------------------------error.html--------------------------------------");
 		PrintWriter writer = response.getWriter();
-		UserService userService = new UserService();
-		User user = null;
+		ErrorService errorService=new ErrorService();
 		Map<String, Object> map  = new HashMap<String, Object>();
-		int userId = -1;
-		//前端获取传入的data
-		String userid = null;
-		if (request.getParameter("userid") != null) {
-			userid = request.getParameter("userid");
-			userId = Integer.parseInt(userid);
+	
+		String errorName =null;
+		if (request.getParameter("errorCheck") != null) {
+			errorName = request.getParameter("errorCheck");
 		} else {
-			map.put("userid", "null");
+			map.put("errorCheck", "null");
 		}
-		
-		user = userService.queryUserByUserId(userId);
-		if (user != null) {//插入成功
-			System.out.println("找到当前用户" + user);
-			//处理成功返回result=0	
+
+		String errorDesc =null;
+		if (request.getParameter("errorDesc") != null) {
+			errorDesc = request.getParameter("errorDesc");
+		} else {
+			map.put("errorDesc", "null");
+		}
+		String contactInfo =null;
+		if (request.getParameter("errorPhoneEmain") != null) {
+			contactInfo = request.getParameter("errorPhoneEmain");
+		} else {
+			map.put("errorPhoneEmain", "null");
+		}
+		boolean t = errorService.insertError(errorName, errorDesc, contactInfo);			
+		if (t) {//插入成功			
 			map.put("result", "0");
-			map.put("userId", userId);
-			map.put("userid", userId);
 			System.out.println("map找到啦..." + map);
 		} else {
 			System.out.println("map未找到...");
